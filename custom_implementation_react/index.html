@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React implement using cdn....</title>
+</head>
+<body>
+            <div id="root">
+                
+            </div>
+            
+
+            <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+    // here we using raw javascript.....
+    // this will return bydefault .......
+    // const reactelement=()=> React.createElement("button",{id:"btn"},React.createElement("span",{},"submit"));
+    // here we have to return manually.......
+    // it return json object....
+    const reactelement=()=>
+    {
+        return React.createElement("button",{id:"btn"},React.createElement("span",{},"submit"));
+}
+
+    
+    const rootvalue=document.getElementById('root');
+        const reactrootvalue=ReactDOM.createRoot(rootvalue);
+        reactrootvalue.render(reactelement());
+
+    
+</script>
+</body>
+</html>
